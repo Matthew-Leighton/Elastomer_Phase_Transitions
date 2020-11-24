@@ -87,7 +87,7 @@ for j in range(len(psi0list)):
     ax.plot((strainlist-1)*100,stress,label=labellist[j],lw=3,ls=lslist[j])
 
 
-ax.set_ylabel('$\\frac{\sigma}{\mu}$',fontsize=20,rotation=0,labelpad=15)
+ax.set_ylabel('$\\frac{\sigma}{\mu}$',fontsize=20,rotation=0,labelpad=15x)
 ax.set_xlabel('Fibril Strain',fontsize=16)
 ax.set_ylim(-0.6,0.3)
 ax.set_xlim(-20,10)
