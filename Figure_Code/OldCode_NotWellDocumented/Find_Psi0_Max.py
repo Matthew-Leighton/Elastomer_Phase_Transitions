@@ -9,6 +9,9 @@ rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
 
 
+def lambdac_exact(psi0,zeta):
+    return ( (zeta-1) * (1 - np.sin(psi0)**2 + zeta*np.sin(psi0)**2)/ (zeta - 1 + np.cos(psi0)**2  - 2*zeta*np.cos(psi0)**2 + zeta**2 * np.cos(psi0)**2))**(1/3)
+
 
 def Psi(psi0,strain,zeta):
 	#strain is lambda
@@ -114,6 +117,7 @@ def functiontominimize(criticalstrains,psi0,zeta):
     fprime2 = (f2 - f_coexist(strain2+0.00001,zeta,psi0))/(-0.00001)
     return abs( (f2 - f1)/(strain2-strain1)  - fprime1) + abs( (f2 - f1)/(strain2-strain1)  - fprime2) + abs(fprime1-fprime2)
 
+
 def Spinodal(psi0,zeta):
 	lambdalist = np.linspace(0.5,1,num=1000)
 	count=0
@@ -126,17 +130,27 @@ def Spinodal(psi0,zeta):
 			if is_spinodal(lambdalist[k],psi0,zeta)==0:
 				end_spinodal = lambdalist[k]
 				count+=1
-	return np.array([start_spinodal,end_spinodal])
+
+	if count==0:
+		return np.array([np.NaN,np.NaN])
+	else:
+		return np.array([start_spinodal,end_spinodal])
 
 #Calculates coexistence region for general psi_0 (still must be constant):
 def Coexist(psi0,zeta):
 	spinodalpoints = Spinodal(psi0,zeta)
-	common_t = pso(functiontominimize,[0.7,spinodalpoints[1]-0.000001],[spinodalpoints[0],1],args=(psi0,zeta))[0]    
-	#common_t = pso(functiontominimize,[0.5,zeta**(-1/3)-0.00001],[zeta**(-1/3),1],args=(psi0,zeta))[0]    
 
-	return common_t[0],common_t[1]
+	if np.isnan(spinodalpoints[0]) and psi0<=0.4:
+		return np.NaN,np.NaN
+	elif psi0<=0.40:
+		common_t = pso(functiontominimize,[0.5,spinodalpoints[1]-0.000001],[spinodalpoints[0],1],args=(psi0,zeta))[0]    
+		return common_t[0],common_t[1]
+	else:
+		common_t = pso(functiontominimize,[0.91,lambdac_exact(psi0,zeta)-0.01],[lambdac_exact(psi0,zeta)+0.01,1],args=(psi0,zeta))[0]    
+		#common_t = minimize(functiontominimize,[0.92,0.99],bounds = ((0.9,spinodalpoints[0]),(spinodalpoints[1],1)),args=(psi0,zeta),method='BFGS').x
+		#common_t = minimize(functiontominimize,[spinodalpoints[0]-0.01,spinodalpoints[1]+0.01],args=(psi0,zeta),method='Nelder-Mead').x
 
-
+		return common_t[0],common_t[1]
 
 
 
@@ -160,16 +174,16 @@ def PlotFig1():
 
 	# Plot Twist Functions:
 	ax1.plot(100*epsilonlist, psi_00(lambdalist,zeta),label = '$\psi_0 = 0$',lw=2,ls='-',color='black')
-	ax1.plot(100*epsilonlist, ExactPsi(0.1,lambdalist,zeta),label = '$\psi_0 = 0.1$',lw=2.5,ls='-.',color='blue')
-	ax1.plot(100*epsilonlist, ExactPsi(0.3,lambdalist,zeta),label = '$\psi_0 = 0.3$',lw=3,ls='--',color='xkcd:orange')
-	ax1.plot(100*epsilonlist, ExactPsi(0.5,lambdalist,zeta),label = '$\psi_0 = 0.5$',lw=2,ls=':',color='xkcd:red')
+	ax1.plot(100*epsilonlist, ExactPsi(0.4,lambdalist,zeta),label = '$\psi_0 = 0.4$',lw=2.5,ls='-.',color='blue')
+	ax1.plot(100*epsilonlist, ExactPsi(0.41,lambdalist,zeta),label = '$\psi_0 = 0.41$',lw=3,ls='--',color='xkcd:orange')
+	ax1.plot(100*epsilonlist, ExactPsi(0.45,lambdalist,zeta),label = '$\psi_0 = 0.45$',lw=2,ls=':',color='xkcd:red')
 
 
 	# Plot free energy densities:
 	ax2.plot(100*epsilonlist, f0(lambdalist,zeta),label = '$\psi_0 = 0$',lw=2,ls='-',color='black')
-	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.1),label = '$\psi_0 = 0.1$',lw=2.5,ls='-.',color='blue')
-	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.3),label = '$\psi_0 = 0.3$',lw=3,ls='--',color='xkcd:orange')
-	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.5),label = '$\psi_0 = 0.5$',lw=2,ls=':',color='xkcd:red')
+	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.4),label = '$\psi_0 = 0.1$',lw=2.5,ls='-.',color='blue')
+	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.41),label = '$\psi_0 = 0.3$',lw=3,ls='--',color='xkcd:orange')
+	ax2.plot(100*epsilonlist, f(lambdalist,zeta,0.45),label = '$\psi_0 = 0.5$',lw=2,ls=':',color='xkcd:red')
 
 	# Plot Coexistence Regions:
 	lambda_low_0,lambda_high_0 = Coexist_0(zeta)
@@ -177,19 +191,19 @@ def PlotFig1():
 	ax2.vlines(100*(lambda_high_0-1),1.49085,1.493,lw=2,ls='-',color='black')
 	ax2.vlines(100*(lambda_low_0-1),1.49085,1.493,lw=2,ls='-',color='black')
 
-	lambda_low_0,lambda_high_0 = Coexist(0.1,zeta)
+	lambda_low_0,lambda_high_0 = Coexist(0.4,zeta)
 	ax2.hlines(1.4945,100*(lambda_low_0-1),100*(lambda_high_0-1),lw=2.5,ls='-.',color='blue')
 	ax2.vlines(100*(lambda_high_0-1),1.49435,1.4965,lw=2,ls='-',color='blue')
 	ax2.vlines(100*(lambda_low_0-1),1.49435,1.4965,lw=2,ls='-',color='blue')
 
-	lambda_low_0,lambda_high_0 = Coexist(0.3,zeta)
+	lambda_low_0,lambda_high_0 = Coexist(0.41,zeta)
 	ax2.hlines(1.497,100*(lambda_low_0-1),100*(lambda_high_0-1),lw=3,ls='--',color='xkcd:orange')
 	ax2.vlines(100*(lambda_high_0-1),1.4968,1.499,lw=2,ls='-',color='xkcd:orange')
 	ax2.vlines(100*(lambda_low_0-1),1.4968,1.499,lw=2,ls='-',color='xkcd:orange')
 
 	#No Coexistence Region for psi0=0.5
-	#lambda_low_0,lambda_high_0 = Coexist(0.5,zeta)
-	#ax2.hlines(1.522,100*(lambda_low_0-1),100*(lambda_high_0-1),lw=3,ls=':',color='xkcd:red')
+	lambda_low_0,lambda_high_0 = Coexist(0.42,zeta)
+	ax2.hlines(1.522,100*(lambda_low_0-1),100*(lambda_high_0-1),lw=3,ls=':',color='xkcd:red')
 
 
 
@@ -222,3 +236,5 @@ def PlotFig1():
 
 
 PlotFig1()
+
+print(Coexist(0.41,1.3))

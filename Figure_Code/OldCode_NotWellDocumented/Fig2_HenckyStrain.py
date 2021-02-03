@@ -183,8 +183,8 @@ ax2.minorticks_on()
 
 # Plot Coexistence Regions:
 Lambda_Low,Lambda_High = CoexistenceRegion0(zetalist)
-ax1.plot(100*(Lambda_High-1),zetalist,color='black',lw=1.5,ls='-')
-ax1.plot(100*(Lambda_Low-1),zetalist,color='black',lw=1.5,ls='-')
+ax1.plot(100*np.log(Lambda_High),zetalist,color='black',lw=1.5,ls='-')
+ax1.plot(100*np.log(Lambda_Low),zetalist,color='black',lw=1.5,ls='-')
 
 sigmalist = Stress0(zetalist,Lambda_High,Lambda_Low)
 ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0$',color='black',lw=1.5,ls='-')
@@ -192,8 +192,8 @@ ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0$',color='black',lw=1.5,ls='-')
 
 psi0 = 0.1
 Lambda_Low,Lambda_High = CoexistenceRegion(psi0,zetalist)
-ax1.plot(100*(Lambda_High-1),zetalist,color='blue',lw=2,ls='-.')
-ax1.plot(100*(Lambda_Low-1),zetalist,color='blue',lw=2,ls='-.')
+ax1.plot(100*np.log(Lambda_High),zetalist,color='blue',lw=2,ls='-.')
+ax1.plot(100*np.log(Lambda_Low),zetalist,color='blue',lw=2,ls='-.')
 
 sigmalist = Stress(zetalist,Lambda_High,Lambda_Low,psi0)
 ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.1$',color='blue',lw=2,ls='-.')
@@ -201,8 +201,8 @@ ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.1$',color='blue',lw=2,ls='-.')
 
 psi0 = 0.2
 Lambda_Low,Lambda_High = CoexistenceRegion(psi0,zetalist)
-ax1.plot(100*(Lambda_High-1),zetalist,color='green',lw=2.5,ls=':')
-ax1.plot(100*(Lambda_Low-1),zetalist,color='green',lw=2.5,ls=':')
+ax1.plot(100*np.log(Lambda_High),zetalist,color='green',lw=2.5,ls=':')
+ax1.plot(100*np.log(Lambda_Low),zetalist,color='green',lw=2.5,ls=':')
 
 sigmalist = Stress(zetalist,Lambda_High,Lambda_Low,psi0)
 ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.2$',color='green',lw=2.5,ls=':')
@@ -210,8 +210,8 @@ ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.2$',color='green',lw=2.5,ls=':')
 
 psi0 = 0.3
 Lambda_Low,Lambda_High = CoexistenceRegion(psi0,zetalist)
-ax1.plot(100*(Lambda_High-1),zetalist,color='xkcd:orange',lw=3,ls='--')
-ax1.plot(100*(Lambda_Low-1),zetalist,color='xkcd:orange',lw=3,ls='--')
+ax1.plot(100*np.log(Lambda_High),zetalist,color='xkcd:orange',lw=3,ls='--')
+ax1.plot(100*np.log(Lambda_Low),zetalist,color='xkcd:orange',lw=3,ls='--')
 
 sigmalist = Stress(zetalist,Lambda_High,Lambda_Low,psi0)
 ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.3$',color='xkcd:orange',lw=3,ls='--')
@@ -230,8 +230,8 @@ np.savetxt('LambdaHigh_Psi0_04.csv',Lambda_High,delimiter=',')
 Lambda_Low = np.loadtxt('LambdaLow_Psi0_04.csv',delimiter=',')
 Lambda_High = np.loadtxt('LambdaHigh_Psi0_04.csv',delimiter=',')
 
-ax1.plot(100*(Lambda_High-1),zetalist,color='red',lw=3.3,ls='-')
-ax1.plot(100*(Lambda_Low-1),zetalist,color='red',lw=3.3,ls='-')
+ax1.plot(100*np.log(Lambda_High),zetalist,color='red',lw=3.3,ls='-')
+ax1.plot(100*np.log(Lambda_Low),zetalist,color='red',lw=3.3,ls='-')
 
 sigmalist = Stress(zetalist,Lambda_High,Lambda_Low,psi0)
 ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.4$',color='red',lw=3.3,ls='-')
@@ -239,8 +239,7 @@ ax2.plot(sigmalist,zetalist,label='$\psi_0 = 0.4$',color='red',lw=3.3,ls='-')
 
 # Axes, Labels, and Aesthetic Stuff:
 
-ax1.text(-15,1.63,'coexistence',fontsize=16)
-ax1.text(-13.7,1.54,'region',fontsize=16)
+ax1.text(-13,1.5,'Coexistence',fontsize=16)
 ax1.text(-3,1.6,r'$\epsilon_L$',fontsize=20)
 ax1.text(-15,1.2,r'$\epsilon_H$',fontsize=20)
 
