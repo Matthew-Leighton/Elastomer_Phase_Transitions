@@ -10,7 +10,7 @@ rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
 
 
-
+# Post-strain twist angle:
 def ExactPsi(psi0,strain,zeta):
     x = ((zeta+1)*(strain**3 -1) + (zeta-1)*(strain**3 +1) * np.cos(2*psi0))/( 2*strain**(3/2)*(zeta-1)*np.sin(2*psi0) )
     psi = (1/2) * np.arctan(1/x)
@@ -18,6 +18,7 @@ def ExactPsi(psi0,strain,zeta):
         psi=psi+ (np.pi/2)
     return psi
 
+# Integrand for the next function:
 def integrand(r,strain,zeta,psi0_surf):
     psi0 = psi0_surf * r
     psi = ExactPsi(psi0*r,strain,zeta)
@@ -26,6 +27,7 @@ def integrand(r,strain,zeta,psi0_surf):
     fe += np.sqrt(strain)*(2 - zeta - 1/zeta)*np.sin(2*psi0)*np.sin(2*psi)/2
     return fe * r
 
+# Computes the volume-averaged free energy
 def volume_averaged_f(strain,zeta,psi0_surf):
     fe = quad(integrand,0,1,args=(strain,zeta,psi0_surf))[0]
     
@@ -160,7 +162,7 @@ for j in range(N):
 psi[0]=np.pi/2
 ax2.plot(radius,psi,label='$\epsilon_H = -12.4\%$',lw=3,ls='--',color='xkcd:purple')
 
-strain = Lambda_Low#+0.001
+strain = Lambda_Low
 psi=[]
 for j in range(N):
     psi.append(ExactPsi(psi0[j],strain,zeta))

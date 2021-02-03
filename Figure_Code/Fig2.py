@@ -103,6 +103,7 @@ def Coexist(psi0,zeta):
 		return common_t[0],common_t[1]
 
 
+# Returns the lambda_H and lambda_L points, as defined in the text, for a specific value of psi0 and zeta.
 def CoexistenceRegion(psi0,zetalist):
 	Lambda_Low=[]
 	Lambda_High=[]
@@ -114,6 +115,8 @@ def CoexistenceRegion(psi0,zetalist):
 
 	return np.array(Lambda_Low),np.array(Lambda_High)
 
+
+# Same as above, but for psi0=0.
 def CoexistenceRegion0(zetalist):
 	Lambda_Low=[]
 	Lambda_High=[]
@@ -125,7 +128,7 @@ def CoexistenceRegion0(zetalist):
 
 	return np.array(Lambda_Low),np.array(Lambda_High)
 
-
+#Computes the stress as a function of strain. Requires coexistence points as input
 def Stress(zetalist,Coexist_Start,Coexist_End,psi0):
 	N = len(zetalist)
 	sigmalist=np.zeros(N)
@@ -139,19 +142,7 @@ def Stress(zetalist,Coexist_Start,Coexist_End,psi0):
 
 	return sigmalist
 
-def Stress0(zetalist,Coexist_Start,Coexist_End):
-	N = len(zetalist)
-	sigmalist=np.zeros(N)
-	sigmalist[:] = np.NaN
-
-	for i in range(N):
-		zeta = zetalist[i]
-		fstart = f_coexist(Coexist_Start[i],zeta,0)
-		fend = f_coexist(Coexist_End[i],zeta,psi0)
-		sigmalist[i] = (fstart-fend)/(Coexist_Start[i]-Coexist_End[i])
-
-	return sigmalist
-
+#Same as above, but for psi0=0
 def Stress0(zetalist,Coexist_Start,Coexist_End):
 	N = len(zetalist)
 	sigmalist=np.zeros(N)
@@ -181,7 +172,7 @@ ax2=plt.subplot(gs[1])
 ax1.minorticks_on()
 ax2.minorticks_on()
 
-# Plot Coexistence Regions:
+# Plot Coexistence Regions and Stress coexistence line:
 Lambda_Low,Lambda_High = CoexistenceRegion0(zetalist)
 ax1.plot(100*(Lambda_High-1),zetalist,color='black',lw=1.5,ls='-')
 ax1.plot(100*(Lambda_Low-1),zetalist,color='black',lw=1.5,ls='-')
@@ -271,29 +262,4 @@ ax2.tick_params(axis='y', labelsize=14)
 
 plt.tight_layout(pad=0.5)
 plt.show()
-
-
-
-
-
-
-
-def Plot_Stress_Line(zetalist,Coexist_Start,Coexist_End,psi0list):
-	N = len(zetalist)
-	sigmalist=np.zeros(N)
-	sigmalist[:] = np.NaN
-
-	for j in range(len(psi0list)):
-		psi0 = psi0list[j]
-		start_coexist = Coexist_Start[j]
-		end_coexist = Coexist_End[j]
-
-		for i in range(N):
-			zeta = zetalist[i]
-			fstart = f(start_coexist[i],zeta,psi0)
-			fend = f(end_coexist[i],zeta,psi0)
-			sigmalist[i] = (fstart-fend)/(start_coexist[i]-end_coexist[i])
-
-		ax2.plot(sigmalist,zetalist,color=colorlist[j],label='$\psi_0 = $'+str(psi0list[j]),lw=3)
-
 

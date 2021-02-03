@@ -6,24 +6,17 @@ import matplotlib.gridspec as gridspec
 from pyswarm import pso
 from scipy.optimize import minimize
 
-
 rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
+
 
 def Psi(psi0,strain,zeta):
 	#strain is lambda
     x = ((zeta+1)*(strain**3 -1) + (zeta-1)*(strain**3 +1) * np.cos(2*psi0))/( 2*strain**(3/2)*(zeta-1)*np.sin(2*psi0) )
     return (1/2) * np.arctan(1/x)
 
-def ExactPsi(psi0,strainlist,zeta):
-	#Returns correct branch of the solution
-	psi = Psi(psi0,strainlist,zeta)
-	for i in range(len(strainlist)):
-		if psi[i]<0:
-			psi[i]=psi[i]+ (np.pi/2)
-	return psi
-
 def ExactPsi(psi0,strain,zeta):
+    #returns correct branch of the solution
     x = ((zeta+1)*(strain**3 -1) + (zeta-1)*(strain**3 +1) * np.cos(2*psi0))/( 2*strain**(3/2)*(zeta-1)*np.sin(2*psi0) )
     psi = (1/2) * np.arctan(1/x)
     if psi<0:
@@ -31,6 +24,7 @@ def ExactPsi(psi0,strain,zeta):
     return psi
 
 def f(strain,zeta,psi0):
+    #Computes the free energy density
     psi = ExactPsi(psi0,strain,zeta)
     fe = 1/strain + (1/strain)*(1+(zeta-1)*np.sin(psi0)**2)*(1+(1/zeta -1)*np.sin(psi)**2)
     fe += (strain**2)*(1+(zeta-1)*np.cos(psi0)**2)*(1+(1/zeta -1)*np.cos(psi)**2)
@@ -38,6 +32,7 @@ def f(strain,zeta,psi0):
     return fe/2
 
 
+#Params and setup
 N=1000
 zeta=1.3
 strainlist = np.linspace(0.8,1.1,num=N)
@@ -45,6 +40,8 @@ lslist = ['-','-.','--',':']
 colorlist = ['black','blue','xkcd:orange','xkcd:red']
 lwlist = [2,2.5,3,2]
 
+
+#Function to minimize to compute the coexistence points
 def functiontominimize(criticalstrains):
     strain1 = criticalstrains[0]
     strain2 = criticalstrains[1]
@@ -54,8 +51,14 @@ def functiontominimize(criticalstrains):
     fprime2 = (f2 - f(strain2+0.0001,zeta,psi0))/(-0.0001)
     return abs( (f2 - f1)/(strain2-strain1)  - fprime1) + abs( (f2 - f1)/(strain2-strain1)  - fprime2) + abs(fprime1-fprime2)
 
+
+# Psi0 values of interest
 psi0list = [10**(-6),0.1,0.3,0.5] #[10**(-6),0.1,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4]
 labellist= ['$\psi_0=0$','$\psi_0=0.1$','$\psi_0=0.3$','$\psi_0=0.5$'] #['0','0.1','0.05','0.1','0.15','0.2','0.25','0.3','0.35','0.4']
+
+
+
+# Compute and plot the stress-strain curves:
 
 fig, ax = plt.subplots()
 
