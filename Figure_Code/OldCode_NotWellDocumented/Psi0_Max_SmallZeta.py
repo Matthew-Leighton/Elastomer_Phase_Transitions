@@ -42,8 +42,8 @@ def f2(strain,psi0,zeta):
     return f_2
 
 
-
-
+#Getting psi_0_max to 4 sigfigs:
+'''
 zetalist=np.linspace(1,1.1,num=1000)
 
 
@@ -79,6 +79,41 @@ plt.tick_params(axis='x', labelsize=14)
 plt.tick_params(axis='y', labelsize=14)
 
 plt.tight_layout(pad=0.5)
-plt.show()
+plt.show()'''
 
+
+zetalist=np.linspace(1.0015,1.0024,num=1000)
+
+psi0=0.423848
+plt.plot(zetalist,f2(lambdac_exact(psi0,zetalist),psi0,zetalist),label='$\psi_0=$'+str(psi0))
+
+psi0=0.423849
+plt.plot(zetalist,f2(lambdac_exact(psi0,zetalist),psi0,zetalist),label='$\psi_0=$'+str(psi0))
+
+psi0=0.42385
+plt.plot(zetalist,f2(lambdac_exact(psi0,zetalist),psi0,zetalist),label='$\psi_0=$'+str(psi0))
+
+
+psi0=0.423851
+plt.plot(zetalist,f2(lambdac_exact(psi0,zetalist),psi0,zetalist),label='$\psi_0=$'+str(psi0))
+
+psi0=0.423852
+plt.plot(zetalist,f2(lambdac_exact(psi0,zetalist),psi0,zetalist),label='$\psi_0=$'+str(psi0))
+
+
+
+plt.hlines(0,1,1.1,color='black',ls=':')
+
+plt.xlabel('$\zeta$',fontsize=20)
+plt.ylabel(r"$f''(\lambda_c)$",fontsize=20)
+plt.ylim(-0.00003,0.00007)
+plt.xlim(1.0015,1.0024)
+
+plt.legend(loc='best',fontsize=14)
+plt.tick_params(axis='x', labelsize=14)
+	#ax2.tick_params(axis='x', labelsize=16)
+plt.tick_params(axis='y', labelsize=14)
+
+plt.tight_layout(pad=0.5)
+plt.show()
 

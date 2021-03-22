@@ -31,7 +31,7 @@ psi0=16*np.pi/180
 mean_psi0_squaredlist = [0.01,0.02,0.04,0.08]#,0.12,0.16]
 
 
-'''
+
 for i in mean_psi0_squaredlist:
 	plt.plot(100*epsilon_D_list,psi(epsilon_D_list,psi0,i),label=r'$\langle\psi_0^2\rangle =$'+str(i),lw=3)
 
@@ -79,7 +79,7 @@ plt.tick_params(axis='y', labelsize=14)
 
 plt.tight_layout(pad=0.5)
 
-plt.show()
+plt.show()'''
 
 
 
