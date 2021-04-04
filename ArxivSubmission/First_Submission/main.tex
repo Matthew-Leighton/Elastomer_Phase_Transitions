@@ -5,8 +5,8 @@
 \usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{balance}
 \usepackage{mathptmx}
-\usepackage{amssymb}   % added
-\usepackage{amsmath}   % added
+\usepackage{amssymb} 
+\usepackage{amsmath}   
 \usepackage{sectsty}
 \usepackage{graphicx} 
 \usepackage{lastpage}
@@ -58,7 +58,7 @@
 \sectionfont{\sffamily\Large}
 \subsectionfont{\normalsize}
 \subsubsectionfont{\bf}
-\setstretch{1.125} %In particular, please do not alter this line.
+\setstretch{1.125} 
 \setlength{\skip\footins}{0.8cm}
 \setlength{\footnotesep}{0.25cm}
 \setlength{\jot}{10pt}
@@ -100,16 +100,16 @@
   \begin{@twocolumnfalse}
 \vspace{1em}
 \sffamily
-\begin{tabular}{m{4.5cm} p{13.5cm} }
+\begin{tabular}{m{0.5cm} p{16cm} }
 
 %%%%%%%%%% TITLE
- & \noindent\LARGE{\textbf{Chiral phase-coexistence in compressed double-twist elastomers}}\\ %$^\dag$}}\\
+& \noindent\LARGE{\textbf{Chiral phase-coexistence in compressed double-twist elastomers}}\\ %$^\dag$}}\\
 \vspace{0.3cm} & \vspace{0.3cm} \\
 & \noindent\large{Matthew P. Leighton$^{a,b}$, Laurent Kreplak$^a$, and Andrew D. Rutenberg$^{a,\ast}$}\\
 & \today\\
 
 
-&  \noindent\normalsize{
+& \noindent\normalsize{
 We adapt the theory of anisotropic rubber elasticity to model cross-linked double-twist liquid crystal cylinders such as exhibited in biological systems. In mechanical extension we recover strain-straightening, but with an exact expression in the small twist-angle limit. In compression, we observe coexistence between high and low twist phases. Coexistence begins at small compressive strains and is robustly observed for any anisotropic cross-links and for general double-twist functions -- but disappears at large twist angles. Within the coexistence region, significant compression of double-twist cylinders is allowed at constant stress. Our results are qualitatively consistent with previous observations of swollen or compressed collagen fibrils, indicating that this phenomenon may be readily accessible experimentally.
 }\\
 \end{tabular}
@@ -147,15 +147,11 @@ Biological tissues often have substantial amounts of intermolecular cross-links.
 %elastomer
 The elastomeric theory developed by Warner \textit{et al} \cite{Warner:1996} enables the calculation of mechanical properties of anisotropically cross-linked nematic liquid crystals. Previous work has concentrated on bulk cholesteric liquid crystals, modelling longitudinal strains applied perpendicular to the initial molecular director field -- parallel to the cholesteric twist axis. These systems exhibit a discontinuous director-field reorientation under extension \cite{Warner:2000}, which can indicate a phase transition. Subsequent treatments of cholesteric systems have considered mechanical response to axial strains and electromagnetic fields within the limit of linear elasticity theory \cite{Menzel:2007}, as well as phase transition behaviour under extension and compression with variable chiral solvents \cite{Stille:2009}. Equilibrium phase transitions of cylindrical double-twist elastomers have been considered, \cite{Xing:2008} but without consideration of mechanical strain effects. Other applications have included tunable optical \cite{Finkelmann:2001} or acoustic \cite{Biscari:2014} properties of these systems.
 
-The mechanical Euler buckling of elastic rods on compression is well understood, and can be manipulated by micropatterned materials.\cite{Singamaneni:2010} Phase-coexistence has also been reported under compression for nanostructured materials \cite{Rey:2016} and under extension for macrostructured Kirigami materials \cite{Rafsanjani:2019}. Chiral-shape instabilities of axially compressed elastic rods can also be observed and are well understood.\cite{Miyazaki:1997} However, less attention has been paid to the structure within compressed elastic materials.
-
 %bridge 
-Recent experimental work has demonstrated plastic torsional buckling in compressed cross-linked (ex-vivo) collagen fibrils.\cite{Peacock:2020} Since compression in elastomeric systems and the structural changes within compressed elastomeric double-twist cylinders are relatively unexplored, we have explored whether elastomeric theory could help us understand the coupling between chiral structure and mechanical strain in these systems. We find that it does, and that axially compressed double-twist elastomers exhibit a novel chiral phase coexistence. 
+Recent experimental work has demonstrated plastic torsional buckling in compressed cross-linked (ex-vivo) collagen fibrils.\cite{Peacock:2020} Since compression in elastomeric systems and the mechanical properties of elastomeric double-twist cylinders are relatively unexplored, we have explored whether elastomeric theory could help us understand the coupling between chiral structure and mechanical strain in these systems. We find that it does, and that axially compressed double-twist elastomers exhibit a novel chiral phase coexistence. 
 
 % our approach
-Our approach is general. We first compute an expression for the free energy density for a double-twist elastomer, which constitutes a full thermodynamic fundamental relation for the system. Using this fundamental relation as a model we explore the mechanics of double-twist cylinders under both extension and compression. We focus in particular on the changes in molecular orientation as well as the internal stresses within the elastomer. Under sufficient compression we find that large twist angles are always observed -- so we develop a general approach valid for all twist-angle functions $\psi(r)$. We also develop a small-angle approximation that allows us to derive analytic expressions for many properties of collagen fibrils under both extension and compression.  
-
-We limit our numerical studies to two model twist functions -- a rope-like constant twist $\psi=\psi_0$ or a linear twist $\psi = a r$. A constant twist angle has been proposed for corneal collagen fibrils \cite{Ottani:2001, Holmes:2001}. A linear twist structure has been proposed for the cores of blue phases \cite{Wright:1989}, and has been directly observed in hair or wool macrofibrils \cite{Bryson:2009, Harland:2011}. Double-twist behavior that is close to either linear or constant twist is also seen in both equilibrium \cite{Cameron:2020} and non-equilibrium \cite{Leighton:2021a} models of double-twist collagen fibrils.
+Our approach is general. We first compute an expression for the free energy density for a double-twist elastomer, which constitutes a full thermodynamic fundamental relation for the system. Using this fundamental relation as a model we explore the mechanics of double-twist cylinders under both extension and compression. We focus in particular on the changes in molecular orientation as well as the internal stresses within the elastomer. Under sufficient compression we find that large twist angles are always observed -- so we develop a general approach valid for all twist-angle functions $\psi(r)$. We also develop a small-angle approximation that allows us to derive analytic expressions for many properties of collagen fibrils under both extension and compression.  We limit our numerical studies to two model twist functions -- a rope-like constant twist $\psi=\psi_0$, or a linear twist $\psi = a r$ that corresponds to a pure torsion of a cylinder. A constant twist angle has been proposed for corneal collagen fibrils \cite{Ottani:2001, Holmes:2001}. A linear twist structure has been proposed for the cores of blue phases \cite{Wright:1989}, and has been directly observed in hair or wool macrofibrils \cite{Bryson:2009, Harland:2011}. Double-twist behavior that is close to either linear or constant twist is also seen in both equilibrium \cite{Cameron:2020} and non-equilibrium \cite{Leighton:2021a} models of double-twist collagen fibrils.
 
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
@@ -164,24 +160,16 @@ When the cross-link configurational entropy dominates, the free-energy density w
 \begin{equation}\label{maineq}
 f = \frac{1}{2}\mu\textnormal{ Tr} (\lo \strain^\top \xlink^{-1} \strain).
 \end{equation}
-The energy scale $\mu= k_BT \rho$ is proportional to both temperature $T$ and the volumetric cross-link density $\rho$, where $k_B$ is Boltzmann's constant. The applied deformation gradient tensor is $\strain$. The tensors $\lo$ and $\xlink$ describe the initial and post-strain structure of the elastomer in terms of the initial and post-strain molecular director fields $\no$ and $\n$:
+The energy scale $\mu= k_BT \rho$ is proportional to both temperature $T$ and the volumetric cross-link density $\rho$. The applied deformation gradient tensor is $\strain$. The tensors $\lo$ and $\xlink$ describe the initial and post-strain structure of the elastomer in terms of the initial and post-strain molecular director fields $\no$ and $\n$:
 \begin{subequations}
 \begin{equation}
 \lo =  \boldsymbol{\underline{\underline{\delta}}} + (\zeta - 1)\boldsymbol{\no}\otimes\boldsymbol{\no},
 \end{equation}
 \begin{equation}
-\xlink = \boldsymbol{\underline{\underline{\delta}}} + (\zeta - 1) \n \otimes \n.
+\xlink = \boldsymbol{\underline{\underline{\delta}}} + (\zeta - 1) \n \otimes \n,
 \end{equation}
 \end{subequations}
-Here $\otimes$ indicates a tensor product, and  $\boldsymbol{\underline{\underline{\delta}}}$ denotes the unit tensor. The anisotropy parameter $\zeta$ is the ratio between the cross-link orientation in the directions parallel to and perpendicular to the molecular director field $\n$.  $\zeta$ is typically taken to be greater than 1 in modelling approaches \cite{Warner:1996,Warner:2000}, which is consistent with experimentally observed values of the cross-link anisotropy in nematic liquid crystals \cite{DAllest:1988,Kundler:1998}. 
-
-%%%%%%%%%%%%%%%%%%%  FIG 1
-\begin{figure}[t!] %%%%%%   Diagram with directions and twist indicated
-\centering
-  \includegraphics[width=8.3cm]{Figure_1.pdf}
-  \caption{Cutaway view of a double-twist cylinder, with the director field indicated by curved blue lines within the cylinder. The three orthogonal directions in cylindrical coordinates, $\hat{\boldsymbol{r}}$, $\hat{\boldsymbol{\phi}}$, and $\hat{\boldsymbol{z}}$ are indicated. The twist angle $\psi(r)$ depends on the radial distance within the cylinder, but is independent of $\phi$ or $z$. Adapted from \cite{Leighton:2021a}.}
-  \label{fig:diagram}
-\end{figure}
+where $\otimes$ indicates a tensor product. The anisotropy parameter $\zeta$ is the ratio between the cross-link orientation in the directions parallel to and perpendicular to the molecular director field $\n$.  $\zeta$ is typically taken to be greater than 1 in modelling approaches \cite{Warner:1996,Warner:2000}, which is consistent with experimentally observed values of the cross-link anisotropy in nematic liquid crystals \cite{DAllest:1988,Kundler:1998}. 
 
 We assume that both the post-strain and zero-strain director fields retain a double-twist structure, so that $\n = -\sin\psi(r) \boldsymbol{\hat{\phi}} + \cos\psi(r) \boldsymbol{\hat{z}}$ with strain and $\psi_0(r)$ with zero-strain. We consider an extension or compression by a factor of $\lambda$ along the cylinder axis.  We assume that both ends of an incompressible cylinder are fully clamped -- with no shear or rotation. Our deformation is then described by the coordinate transform $z\to \lambda z$, $r\to \lambda^{-1/2}r$, and $\phi\to\phi$. The deformation gradient tensor for this deformation is
 \begin{equation}\label{straintensor}
@@ -222,32 +210,32 @@ Using eqn.~\eqref{psieq}, $\psi$ is plotted as a function of strain $\epsilon=\l
 
 Fig.~\ref{fig:energylandscape}B shows the corresponding value of the free energy $f$, where we have used the post strain twist angle $\psi$ that minimizes $f$. For sufficiently small $\psi_0$ we find a substantial coexistence region between two compressional strains ($\epsilon_H$ and $\epsilon_L$) that can be identified by a standard common-tangent construction -- with $f'_H = f'_L$ and $f_L =f_H+f'_H (\epsilon_L-\epsilon_H)$. This coexistence allows the system to further reduce the free-energy of the system, and determines thermodynamic equilibrium wherever the free energy is not a convex function of $\lambda$.
 
-%%%%%%%%%%%%%%%%%%%  FIG 2
+%%%%%%%%%%%%%%%%%%%  FIG 1
 \begin{figure}[t!] %%%%%%   Free Energy Landscape
 \centering
-  \includegraphics[width=8.3cm]{Figure_2.pdf}
+  \includegraphics[width=8.3cm]{Figure_1.pdf}
   \caption{A) The twist angle $\psi$ as a function of longitudinal (axial) strain $\epsilon=\lambda-1$, for various values of $\psi_0$. Positive and negative strains correspond to extension and compression of a cylindrical fibril, respectively. B) The free energy landscape $f/\mu$ as a function of strain for several values of $\psi_0$. Horizontal brackets indicate the coexistence region for corresponding values of $\psi_0$; for $\psi_0=0.5$ there is no coexistence region. In both A) and B) we use a default value of $\zeta=1.3$.}
   \label{fig:energylandscape}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%   FIG 3
+%%%%%%%%%%%%%%%%%%%%   FIG 2
 \begin{figure}[t!] %%%%%% Coexistence
 \begin{centering}
-  \includegraphics[width=8.3cm]{Figure_3.pdf}
-  \caption{A) Coexistence regions for various values of $\psi_0$, plotted versus cross-linking anisotropy $\zeta$ and strain $\epsilon$. The smaller and larger strain boundary curves of coexistence are indicated  by $\epsilon_L$ and $\epsilon_H$ respectively for $\psi_0=0$. Coexistence is not observed for $\psi_0 > \psi_0^c \approx 0.42$.\cite{multicritical} B) Within the coexistence region stress is constant. The coexistence regions are therefore lines when plotted versus $\zeta$ and stress $\sigma/\mu$.}
+  \includegraphics[width=8.3cm]{Figure_2.pdf}
+  \caption{A) Coexistence regions for various values of $\psi_0$, plotted versus cross-linking anisotropy $\zeta$ and strain $\epsilon$. The smaller and larger strain boundaries of coexistence, $\epsilon_L$ and $\epsilon_H$ respectively, are indicated. Coexistence is not observed for $\psi_0 \gtrsim 0.42$. B) Within the coexistence region stress is constant. The coexistence regions are therefore lines when plotted versus $\zeta$ and stress $\sigma/\mu$.}
   \label{fig:coexistence}
   \end{centering}
 \end{figure}
 
-We show the coexistence region in Fig.~\ref{fig:coexistence}A for various values of $\epsilon$, $\psi_0$, and $\zeta$. We observe coexistence at sufficiently small $\zeta$ and $\epsilon<0$ for all $\psi_0 \lesssim 0.42$, while with $\psi_0=0$ we observe coexistence at all $\zeta \neq 1$ and compressive strains $\epsilon < 0$. One consequence of the coexistence across different strains is that the coexistence is also across different twist-angles $\psi$ -- as determined by eqn~\eqref{psieq}.  In Fig.~\ref{fig:coexistence}B we show coexistence curves on the $\zeta-\sigma$ plane for various values of $\psi_0$. As $\psi_0$ increases the extent of the coexistence region decreases -- until it disappears at $\psi_0^c \simeq 0.42385$.\cite{multicritical}
+We show the coexistence region in Fig.~\ref{fig:coexistence}A for various values of $\epsilon$, $\psi_0$, and $\zeta$. We observe coexistence at sufficiently small $\zeta$ and $\epsilon<0$ for all $\psi_0 \lesssim 0.42$, while with $\psi_0=0$ we observe coexistence at all $\zeta \neq 1$ and compressive strains $\epsilon < 0$. One consequence of the coexistence across different strains is that the coexistence is also across different twist-angles $\psi$ -- as determined by eqn~\eqref{psieq}.  In Fig.~\ref{fig:coexistence}B we show coexistence curves on the $\zeta-\sigma$ plane for various values of $\psi_0$. As $\psi_0$ increases the extent of the coexistence region decreases -- until it disappears at $\psi_0 \simeq 0.42$.
 
-When increasing compressive strains enter the coexistence region, at e.g. $\epsilon_L$ in Fig.~\ref{fig:coexistence}A, a slowly increasing fraction $\chi$ of the system will have local strains $\epsilon_H$ -- while the remainder fraction $1-\chi$ will have unchanging strains at $\epsilon_L$. This is the ``lever rule'' of phase coexistence, and we have that $\chi = (\epsilon-\epsilon_L)/(\epsilon_H-\epsilon_L)$ where $\epsilon$ is the average axial strain. In other words, the free energy $f$ is a linear function of $\epsilon$ within coexistence. This implies that the stress $\sigma = \partial f /\partial \lambda$ is constant within the coexistence region. This constant value was shown in Fig.~\ref{fig:coexistence}B vs $\zeta$. In Fig.~\ref{fig:pvstate} we show the constant coexistence region in a plot of stress $\sigma$ vs strain $\epsilon$. 
+When increasing compressive strains enter the coexistence region, at e.g. $\epsilon_L$ in Fig.~\ref{fig:coexistence}A, a slowly increasing fraction $\phi$ of the system will have local strains $\epsilon_H$ -- while the remainder fraction $1-\phi$ will have unchanging strains at $\epsilon_L$. This is the ``lever rule'' of phase coexistence, and we have that $\phi = (\epsilon-\epsilon_L)/(\epsilon_H-\epsilon_L)$ where $\epsilon$ is the average fibril strain. In other words, the free energy $f$ is a linear function of $\epsilon$ within coexistence. This implies that the stress $\sigma = \partial f /\partial \lambda$ is constant within the coexistence region. This constant value was shown in Fig.~\ref{fig:coexistence}B vs $\zeta$. In Fig.~\ref{fig:pvstate} we show the constant coexistence region in a plot of stress $\sigma$ vs strain $\epsilon$. 
 
-%%%%%% Figure 4
+%%%%%% Figure 3
 \begin{figure}[t!] %%%%%%%%  PV State Diagram
 \centering
-   \includegraphics[width=8.3cm]{Figure_4.pdf}
-  \caption{Stress-strain curves of $\sigma/\mu$ vs $\epsilon$ for constant-twist elastomers with various initial twist angles. Coexistence is observed for $\psi_0 \lesssim 0.42$, along with a constant stress between high and low compressive strains: $\epsilon_H$ and $\epsilon_L$, respectively -- indicated with arrows for $\psi_0=0$. Negative strains indicate compression. We use $\zeta=1.3$.}
+   \includegraphics[width=8.3cm]{Figure_3.pdf}
+  \caption{Stress-strain curves of $\sigma/\mu$ vs $\epsilon$ for constant-twist elastomers with various initial twist angles. For $\psi_0 \lesssim 0.42$ coexistence is observed, and a constant stress coexistence is observed between a high and low compressive strain, $\epsilon_H$ and $\epsilon_L$ respectively as indicated. Negative strain indicates compression. We use $\zeta=1.3$.}
   \label{fig:pvstate}
 \end{figure}
 
@@ -259,11 +247,11 @@ For this inhomogeneous director field, minimizing the volume averaged free energ
 
 Phase-coexistence for linear twist may be unsurprising, given coexistence is observed for similar constant twists. However, near the coexistence region the double-twist function $\psi(r)$ that minimizes $\langle f \rangle$ is no longer linear in $r$ -- as shown by the $\epsilon=\epsilon_H$ curve in Fig.~\ref{fig:lineartwist}B. Furthermore, the twist angle function exhibits striking changes of both monotonicity and convexity under larger compressive strains. This can be clearly understood in the small $\psi_0$ limit.
 
-%%%%%%%%%%%%%%%%%%  FIGURE 5
+%%%%%%%%%%%%%%%%%%  FIGURE 4
 \begin{figure}[t!] %%%%%%%  LINEAR STRAIN
 \centering
-  \includegraphics[width=8.3cm]{Figure_5.pdf} 
-  \caption{For cylinders with an initially linear double-twist, $\psi_0(r) = \psi_0^{surf} r/R$. A) The volume-averaged free energy $\langle f \rangle/\mu$ vs longitudinal strain $\epsilon$ for several values of $\psi_0^\text{surf}$ as indicated.   B) The post-strain twist angle function $\psi(r)$  vs $r/R$ for various values of applied strain $\epsilon$, given an initial linear twist function with $\psi_0^\text{surf}=0.3$ (corresponding to the dashed orange curve in A). Note that at $\epsilon_H$ we observe a qualitative inversion of the twist-function. We use $\zeta=1.3$ in both A) and B).}
+  \includegraphics[width=8.3cm]{Figure_4.pdf} 
+  \caption{For cylinders with an initially linear double-twist, $\psi_0(r) = \psi_0^{surf} r/R$. A) The volume-averaged free energy $\langle f \rangle/\mu$ vs longitudinal strain $\epsilon$ for several values of $\psi_0^\text{surf}$ as indicated.   B) The post-strain twist angle function $\psi(r)$  vs $r/R$ for various values of applied strain $\epsilon$, given an initial linear twist function with $\psi_0^\text{surf}=0.3$ (corresponding to the solid black curves in A). Note that at $\epsilon_H$ we observe a qualitative inversion of the twist-function. We use $\zeta=1.3$ in both A) and B).}
   \label{fig:lineartwist}
 \end{figure}
 
@@ -293,7 +281,7 @@ where we have used $\lambda_L$ for the low-twist small-strain branch and $\lambd
 \end{eqnarray}
 These equations are easily solved numerically, and corresponds to the thin black curves in Fig.~\ref{fig:coexistence}. 
 
-We can take the $\zeta \rightarrow \infty$ limit in eqns~\eqref{smallcoexist} and obtain $\lambda_H = (-6+2 \sqrt{10})^{1/3} \zeta^{-1/3} \simeq 0.69 \zeta^{-1/3}$, $\lambda_L = 2 \lambda_H/(4-\sqrt{10}) \simeq 1.64 \zeta^{-1/3}$, and so constant $\sigma/\mu = -2/\lambda_L^2 \simeq -0.74 \zeta^{2/3}$ within the coexistence region. This illustrates that coexistence can always be observed under compression, even for $\zeta \rightarrow \infty$, for small enough $\psi_0$.
+We can take the $\zeta \rightarrow \infty$ limit in eqns~\eqref{smallcoexist} and obtain $\lambda_H = (-6+2 \sqrt{10})^{1/3} \zeta^{-1/3} \simeq 0.69 \zeta^{-1/3}$, $\lambda_L = 2 \lambda_H/(4-\sqrt{10}) \simeq 1.64 \zeta^{-1/3}$, and $\sigma = -2/\lambda_L^2 \simeq -0.74 \zeta^{2/3}$. This illustrates that coexistence can always be observed under compression, even for $\zeta \rightarrow \infty$, for small enough $\psi_0$.
 
 Under extension (and with $\zeta>1$), initial twist-angles always decrease as $\lambda$ increases  -- they exhibit strain-straightening. This can be seen generally in eqn~\eqref{psieq}, and also in the small-angle limit in eqn~\eqref{smallpsi}. We can therefore self-consistently take the small angle limit of $f$ in eqn~\eqref{expanded} and use eqn~\eqref{stress} to obtain the stress vs extensive strain:
 \begin{equation}
@@ -303,11 +291,7 @@ Under extension (and with $\zeta>1$), initial twist-angles always decrease as $\
 & + \mathcal{O}(\psi_0^4).
 \end{aligned}
 \end{equation}
-We see that for small initial twist angles under extension, the leading behavior agrees with standard isotropic rubber elasticity. We can also estimate the Young's modulus $E  = d \sigma/d \lambda$, and obtain
-\begin{equation} \label{youngs}
-E  = 3 \mu (1-3 \psi_0^2) + O(\psi_0^4) 
-\end{equation}
-at $\lambda=1$.
+We see that for small initial twist angles under extension, the leading behavior agrees with standard isotropic rubber elasticity.
 
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%
@@ -316,37 +300,30 @@ We have considered the effects of axial strain on double-twist elastomeric cylin
 
 Under axial compression, we have identified a novel phase-coexistence between high and low twist double-twist phases that begins at small compressive strains. This phase-coexistence is observed for initial twist angles up to $\psi_0 \simeq 0.42$ and for all non-zero values of the cross-link anisotropy parameter $\zeta$. Notably, even an initially achiral cylinder with $\psi_0=0$ will spontaneously exhibit a strong chiral rotation at moderate compressive strains. We would expect physical achiral systems to exhibit spontaneous chiral symmetry breaking as a result. 
 
-The chiral double-twist instabilities we describe here appear to be novel. In particular, they are evident even in an initially achiral cylinder with $\psi_0=0$. Mechanical transitions in double-twist elastomers have not been previously studied, to our knowledge. \citet{Xing:2008} showed that a double-twist configuration was a good candidate ground state for an unstressed initially isotropic elastomeric cylinder that was moved into a cholesteric phase – i.e. due to changing Frank free-energy contributions. We have not included Frank free-energy terms in our treatment. 
+The mechanical Euler buckling of elastic rods on compression is well understood, and can be manipulated by micropatterned materials.\cite{Singamaneni:2010} Phase-coexistence under compression has also been reported for nanostructured materials \cite{Rey:2016} and for macrostructured Kirigami materials \cite{Rafsanjani:2019}. Chiral-shape instabilities of axially compressed elastic rods can also be observed and are well understood.\cite{Miyazaki:1997} However, the chiral double-twist instabilities we describe here appear to be novel. In particular, they are evident even in an initially achiral cylinder with $\psi_0=0$.
 
-Mechanical transitions of strained elastomers have long been studied, but typically under extensional strain.\cite{Mitchell:1993, Warner:1996, Warner:2000} Both axial extension \cite{Burridge:2006, Stille:2009} and compression \cite{Stille:2009} of bulk cholesteric elastomers have been studied. Singular transitions were predicted, though coexistence was not explored. Since these transitions relied on relatively weak Frank free-energy contributions, they may be less robust experimentally than the elastomeric transitions and coexistence we report.
+Mechanical transitions in double-twist elastomers have not been previously studied, to our knowledge. \citet{Xing:2008} showed that a double-twist configuration was a good candidate ground state for an unstressed initially isotropic elastomeric cylinder that was moved into a cholesteric phase – i.e. due to changing Frank free-energy contributions. We have not included Frank free-energy terms in our treatment. 
 
-Ex-vivo collagen fibrils appear to be well described by a double-twist configuration, and to be in the strongly cross-linked regime that should be dominated by our elastomeric model \cite{Leighton:2021a}. Recent experimental studies of collagen fibrils under both extension \cite{Bell:2018} and compression \cite{Peacock:2020} appear to qualitatively support our results. Under axial extension, \citet{Bell:2018} observed strain-straightening of the average twist of corneal fibrils. This is consistent with Fig.~\ref{fig:energylandscape} and eqn~\eqref{smallpsi}. A more detailed analysis of the differences between fibril strain and D-band strain in collagen fibrils under extension is in progress \cite{Leighton:2021b}.
+Mechanical transitions of strained elastomers have long been studied, but 
+typically under extensional strain.\cite{Mitchell:1993, Warner:1996, Warner:2000} Both axial extension \cite{Burridge:2006, Stille:2009} and compression \cite{Stille:2009} of bulk cholesteric elastomers have been studied. Singular transitions were predicted, though coexistence was not explored. Since these transitions relied on relatively weak Frank free-energy contributions, they may be less robust experimentally than the elastomeric transitions and coexistence we report.
 
-Experimentally, compressed ex-vivo (cross-linked) collagen fibrils attached to elastic substrates exhibit buckled regions that coexist with unbuckled regions along the fibril length \cite{Peacock:2020}. Qualitatively consistent with our results is that this coexistence starts  at small compressional strains (below $1\%$). Also consistent with coexistence, the amplitude of the buckled regions does not appear to increase with compressional strain but their frequency of appearance does. Furthermore, the buckled regions exhibit an increased fibril diameter consistent with the smaller $\lambda$ and increased transverse $1/\sqrt{\lambda}$ predicted from our results in Fig.~\ref{fig:coexistence} and eqn~\eqref{straintensor}. 
+Ex-vivo collagen fibrils appear to be well described by a double-twist configuration, and to be in the strongly cross-linked regime that should be dominated by our elastomeric model \cite{Leighton:2021a}. Recent experimental studies of collagen fibrils under both extension \cite{Bell:2018} and compression \cite{Peacock:2020} appear to qualitatively support our results. Under axial extension, \citet{Bell:2018} observed strain-straightening of the average twist of corneal fibrils. This is consistent with Fig.~\ref{fig:energylandscape} and eqn~\eqref{smallpsi}. With the assumption that the reported D-band strain equals the fibril strain, quantitative agreement with the Bell results with anisotropy parameter $\zeta =1.3$ are obtained (not shown) -- this motivated our choice of $\zeta$ in some figures. A more detailed analysis of the differences between fibril strain and D-band strain in collagen fibrils under extension is in progress \cite{Leighton:2021b}.
 
-These AFM studies of compressed collagen fibrils \cite{Peacock:2020} were not able to resolve the fibril twist. However, much earlier EM studies of swollen fibrils due to urea treatment \cite{Lillie:1977} did exhibit the coexistence of strongly twisted swollen regions of the fibril with less twisted narrower regions. While these were not studies of compressed fibrils, the qualitative similarity to our proposed coexistence indicates that a similar phenomenon may be observed as osmotic pressure is varied. 
+Under compression, ex-vivo (cross-linked) collagen fibrils attached to elastic substrates exhibit buckled regions that coexist with unbuckled regions along the fibril length \cite{Peacock:2020}. Qualitatively consistent with our results is that this coexistence starts  at small compressional strains (as little as $1\%$). Also consistent with coexistence, the amplitude of the buckled regions does not appear to increase with compressional strain but their frequency of appearance does. Furthermore, the buckled regions exhibit an increased fibril diameter consistent with the smaller $\lambda$ and increased transverse $1/\sqrt{\lambda}$ predicted from our results in Fig.~\ref{fig:coexistence} and eqn~\eqref{straintensor}. 
 
-We can use our coexistence region plot Fig.~\ref{fig:coexistence}A to approximate $\zeta \approx 1.1$ for $\epsilon \approx -0.01$ from \citet{Peacock:2020} -- where these are experimental upper-bounds for collagen fibrils from tendon (with $\psi_0 \simeq 0.1$). This implies from Fig.~\ref{fig:coexistence}B that the compressive stress within coexistence is given by $\sigma \approx 0.02 \mu$. Since \citet{Peacock:2020} reported irreversible plastic damage, we can take this as an upper bound of the yield stress of collagen fibrils under compression.  Studies of collagen fibrils in compressed bone by \citet{Groetsch:2019} have determined yield strains of $\approx 1\%$ with a yield stress of $\sigma/E \approx 0.01$ \cite{bone}. Since from Eqn.~\ref{youngs} the Young's modulus for an elastomer is $E \simeq 3 \mu$ for small $\psi_0$, this gives $\sigma \approx 0.03 \mu$  -- remarkably similar to our estimate.
+These AFM studies of compressed collagen fibrils \cite{Peacock:2020} were not able to resolve the fibril twist. However, much earlier EM studies of swollen fibrils due to urea treatment \cite{Lillie:1977} did exhibit the coexistence of strongly twisted swollen regions of the fibril with less twisted narrower regions. While these were not studies of compressed fibrils, the qualitative similarity to our proposed coexistence indicates that a similar phenomenon may be observed as osmotic pressure is varied. We do note that both of these experimental studies \cite{Peacock:2020, Lillie:1977} reported irreversible plastic damage of the fibrils. We may therefore expect  quantitative differences with our equilibrium results. 
 
 Polarization-resolved second harmonic generation (P-SHG) microscopy, a technique which takes advantage of non-linear optical phenomena to measure volume-averaged anisotropy within a sample, could potentially be used to measure the change in molecular twist within different types of collagen fibrils under extension or compression. P-SHG anisotropy measurements of collagen-rich tissues such as full tendons have been made in recent years \cite{Gusachenko:2012, Rouede:2020}, however no experimental measurements have yet been made at the single-fibril level. Measurements of twist within strained fibrils would allow our model to be tested further.
 
-Mechanical effects of coexistence may be easier to detect from detailed stress-strain curves. At coexistence, substantial compressive strains can be realized at constant stress -- as detailed in Fig.~\ref{fig:coexistence} and \ref{fig:pvstate}. Short biaxially strained cylinders embedded within an elastic substrate \cite{Schmidtke:2005} provide an accessible geometry for exploring the compression effects we describe here. Long and unsupported double-twist cylinders under compression would exhibit Euler buckling, which might complicate axial strain application and estimation.  However, lateral reinforcement can significantly increase the load that can be applied to long cylinders without buckling \cite{Brangwynne:2006}. As discussed above, compressive studies have been done by attaching single fibrils to pre-stretched elastic substrates \cite{Peacock:2020} though stress is not easily measured in that configuration. 
-
-Strain coexistence implies that applying compressive strains above $\epsilon_L$ leads to compressive strains at $\epsilon_H$. We call this ``strain-leveraging'' -- after the lever-rule of phase-coexistence. As such, very high strains may be achieved for isolated double-twist cylinders. Since this may also lead to plastic damage \cite{Peacock:2020}, it is interesting to speculate that \emph{in vivo} ultrastructure -- such as closely packed fibrils within tendon -- may suppress chiral buckling much as it suppresses Euler buckling \cite{Brangwynne:2006} -- due to the radial expansion exhibited by these instabilities. 
+Mechanical effects of coexistence may be easier to detect from detailed stress-strain curves. At coexistence, substantial compressive strains can be realized at constant stress -- as detailed in Fig.~\ref{fig:coexistence} and \ref{fig:pvstate}. Short biaxially strained cylinders embedded within an elastic substrate \cite{Schmidtke:2005} provide an accessible geometry for exploring the compression effects we describe here. Long and unsupported double-twist cylinders under compression would exhibit Euler buckling, which might complicate axial strain application and estimation.  However, lateral reinforcement can significantly increase the load that can be applied to long cylinders without buckling \cite{Brangwynne:2006} –– as could larger radius cylinders. As discussed above, compressive studies have been done by attaching single fibrils to pre-stretched elastic substrates \cite{Peacock:2020} though stress is not easily measured in that configuration. 
 
 While our focus is on thermodynamic equilibrium elastomeric configurations, an interesting dynamical consequence would be observed if the system was rapidly mechanically ``quenched'' to a compressive strain within the spinodal region, with $\partial^2 f/\partial \lambda^2<0$, where the system will spontaneously nucleate both phases. We would expect interfaces between the coexisting phases to have excess free-energy, as described by a more detailed treatment that includes gradient terms in the director field and characterized by Frank elastic coefficients \cite{Leighton:2021a}.  To reduce such interfacial costs, the system would then slowly ``coarsen'' towards bulk coexistence. Such coarsening could be exceptionally slow since it would not be driven by interfacial curvature \cite{Bray:2002} but instead by exponentially-small interactions between distant interfaces \cite{Rutenberg:1994}. As such it may be experimentally accessible, and could provide details of the non-elastomeric contributions to the free-energy.
 
 Two open questions remain in terms of our calculation. The first is the effect of the Frank free-energy terms for a weakly cross-linked elastomer. We anticipate a rich phase-diagram under compression. The second is the role of shear deformations when strained fibrils are allowed to freely rotate – as might be expected in some experimental setups. We will address this second question in future work \cite{Leighton:2021b}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Author Contributions}
-MPL wrote the original draft, reviewed and edited, did the visualization, developed the software, and did formal analysis and numerics. LK reviewed and edited and conceptualized the approach. ADR reviewed and edited, supervised, acquired funding, conceptualized the approach, and contributed some of the formal analysis.
-% see https://casrai.org/credit/
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Conflicts of interest}
 There are no conflicts to declare.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgements}
 We thank the Natural Sciences and Engineering Research Council of Canada (NSERC) for operating Grants RGPIN-2018-03781 (LK) and RGPIN-2019-05888 (ADR). MPL thanks NSERC for summer fellowship support (USRA-552365-2020), and a CGS Masters fellowship.

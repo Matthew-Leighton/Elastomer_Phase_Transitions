@@ -1,7 +1,7 @@
 \providecommand*{\mcitethebibliography}{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
 {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{42}
+\begin{mcitethebibliography}{39}
 \providecommand*{\natexlab}[1]{#1}
 \providecommand*{\mciteSetBstSublistMode}[1]{}
 \providecommand*{\mciteSetBstMaxWidthForm}[2]{}
@@ -138,37 +138,6 @@ P.~Biscari, A.~DiCarlo and S.~S. Turzi, \emph{Soft Matter}, 2014, \textbf{10},
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Singamaneni and Tsukruk(2010)]{Singamaneni:2010}
-S.~Singamaneni and V.~V. Tsukruk, \emph{Soft Matter}, 2010, \textbf{6},
-  5681--5692\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Rey \emph{et~al.}(2016)Rey, Fern{\'a}ndez-Rodr{\'\i}guez, Steinacher,
-  Scheidegger, Geisel, Richtering, Squires, and Isa]{Rey:2016}
-M.~Rey, M.~{\'A}. Fern{\'a}ndez-Rodr{\'\i}guez, M.~Steinacher, L.~Scheidegger,
-  K.~Geisel, W.~Richtering, T.~M. Squires and L.~Isa, \emph{Soft Matter}, 2016,
-  \textbf{12}, 3545--3557\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Rafsanjani \emph{et~al.}(2019)Rafsanjani, Jin, Deng, and
-  Bertoldi]{Rafsanjani:2019}
-A.~Rafsanjani, L.~Jin, B.~Deng and K.~Bertoldi, \emph{Proceedings of the
-  National Academy of Sciences}, 2019, \textbf{116}, 8200--8205\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Miyazaki and Kondo(1997)]{Miyazaki:1997}
-Y.~Miyazaki and K.~Kondo, \emph{International Journal of Solids and
-  Structures}, 1997, \textbf{34}, 3619--3636\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Peacock \emph{et~al.}(2020)Peacock, Lee, Beral, Cisek, Tokarz, and
   Kreplak]{Peacock:2020}
 C.~Peacock, E.~Lee, T.~Beral, R.~Cisek, D.~Tokarz and L.~Kreplak, \emph{ACS
@@ -204,7 +173,7 @@ S.~Cameron, L.~Kreplak and A.~D. Rutenberg, \emph{Physical Review Research},
 \bibitem[d'Allest \emph{et~al.}(1988)d'Allest, Maissa, Ten~Bosch, Sixou,
   Blumstein, Blumstein, Teixeira, and Noirez]{DAllest:1988}
 J.~d'Allest, P.~Maissa, A.~Ten~Bosch, P.~Sixou, A.~Blumstein, R.~Blumstein,
-  J.~Teixeira and L.~Noirez, \emph{Physical Review Letters}, 1988, \textbf{61},
+  J.~Teixeira and L.~Noirez, \emph{Physical review letters}, 1988, \textbf{61},
   2562\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -231,18 +200,39 @@ L.~Landau and E.~Lifshitz, \emph{Theory of Elasticity}, Butterworth-Heinemann,
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[mul()]{multicritical}
-The coexistence of $\epsilon_H$ and $\epsilon_L$ represents discontinuous phase
-  transitions at a given $\zeta$. With respect to $\zeta$, coexistence ends
-  above $\zeta_{max}(\psi_0)$ and below $\zeta_{min}(\psi_0) \geq1$. There is a
-  mean-field multicritical point at $\psi_0^c \simeq 0.42385$, where
-  $\zeta_{max}=\zeta_{min}\simeq 1.002$.\relax
-\mciteBstWouldAddEndPunctfalse
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Lei()]{Leighton:2021b}
 M Leighton, A Rutenberg, and L Kreplak (unpublished)\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Singamaneni and Tsukruk(2010)]{Singamaneni:2010}
+S.~Singamaneni and V.~V. Tsukruk, \emph{Soft Matter}, 2010, \textbf{6},
+  5681--5692\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rey \emph{et~al.}(2016)Rey, Fern{\'a}ndez-Rodr{\'\i}guez, Steinacher,
+  Scheidegger, Geisel, Richtering, Squires, and Isa]{Rey:2016}
+M.~Rey, M.~{\'A}. Fern{\'a}ndez-Rodr{\'\i}guez, M.~Steinacher, L.~Scheidegger,
+  K.~Geisel, W.~Richtering, T.~M. Squires and L.~Isa, \emph{Soft Matter}, 2016,
+  \textbf{12}, 3545--3557\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rafsanjani \emph{et~al.}(2019)Rafsanjani, Jin, Deng, and
+  Bertoldi]{Rafsanjani:2019}
+A.~Rafsanjani, L.~Jin, B.~Deng and K.~Bertoldi, \emph{Proceedings of the
+  National Academy of Sciences}, 2019, \textbf{116}, 8200--8205\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Miyazaki and Kondo(1997)]{Miyazaki:1997}
+Y.~Miyazaki and K.~Kondo, \emph{International Journal of Solids and
+  Structures}, 1997, \textbf{34}, 3619--3636\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -278,24 +268,6 @@ J.~H. Lillie, D.~K. MacCallum, L.~J. Scaletta and J.~C. Occhino, \emph{Journal
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Groetsch \emph{et~al.}(2019)Groetsch, Gourrier, Schwiedrzik, Sztucki,
-  Beck, Shephard, Michler, Zysset, and Wolfram]{Groetsch:2019}
-A.~Groetsch, A.~Gourrier, J.~Schwiedrzik, M.~Sztucki, R.~J. Beck, J.~D.
-  Shephard, J.~Michler, P.~K. Zysset and U.~Wolfram, \emph{Acta Biomaterialia},
-  2019, \textbf{89}, 313--329\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[bon()]{bone}
-In bone, \citet{Groetsch:2019} reports $\epsilon^{yield}_{fiber} \approx 4-6\%$
-  for the fiber, while $\epsilon^{yield}_{fibril} \approx 0.2
-  \epsilon^{yield}_{fiber}$. They also report $\sigma^{yield}_{fiber}/E^{fiber}
-  \approx 0.01$.\relax
-\mciteBstWouldAddEndPunctfalse
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Gusachenko \emph{et~al.}(2012)Gusachenko, Tran, Houssen, Allain, and
   Schanne-Klein]{Gusachenko:2012}
